@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='n_result2.css') }}" />
+
+    <script>
+        let isDragging = false;
+    // 마우스가 눌렸을 때 드래그 시작
+    window.addEventListener('mousedown', function() {
+      isDragging = true;
+    });
+    // 마우스를 움직일 때 드래그 중이면 페이지 이동
+    window.addEventListener('mousemove', function(event) {
+      if (isDragging) {
+        window.location.href = "{{ url_for('n_result3') }}";
+      }
+    });
+    // 마우스 버튼을 놓았을 때 드래그 종료
+    window.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+    //이거 위로 지워지워
+    
+    
+      let lastScrollLeft = 0;
+
+      // 스크롤 방향 감지 및 스크롤 이벤트 처리
+      window.addEventListener('scroll', function() {
+        let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        if (scrollLeft < lastScrollLeft) {
+          // 왼쪽으로 스크롤되면 n_result3.html로 이동
+          window.location.href = "{{ url_for('n_result3') }}";
+        }
+        lastScrollLeft = scrollLeft;
+      }, false);
+
+      // group-76.svg 클릭 시 n_result1.html로 이동하는 함수
+      function goToCResult1() {
+        window.location.href = "{{ url_for('n_result1') }}";
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+        <div class="overlap">
+          <img class="large-vec" src="{{ url_for('static', filename='nervous_img2/large-vec.png') }}" alt="Large Vec" />
+          <img class="big-vec" src="{{ url_for('static', filename='nervous_img2/big-vec.png') }}" alt="Big Vec" />
+        </div>
+        <div class="overlap-group">
+          <img class="mid-vec" src="{{ url_for('static', filename='nervous_img2/mid-vec.svg') }}" alt="Mid Vec" />
+          <img class="title-vec" src="{{ url_for('static', filename='nervous_img2/title-vec.svg') }}" alt="Title Vec" />
+          <img class="s-size-vec" src="{{ url_for('static', filename='nervous_img2/s-size-vec.svg') }}" alt="S Size Vec" />
+          <div class="text-wrapper">발생 오류</div>
+          <p class="p">
+            <span class="span">가족을 향한 </span>
+            <span class="text-wrapper-2">걱정</span><span class="span">이<br />가족의 입장에서 </span>
+            <span class="text-wrapper-2">잔소리로 느껴지는<br /></span>
+            <span class="span">오류가 발생할 수 있다.</span>
+          </p>
+          <img class="side-vec" src="{{ url_for('static', filename='nervous_img2/side-vec.svg') }}" alt="Side Vec" />
+          <img class="fm-vec" src="{{ url_for('static', filename='nervous_img2/fm-vec.svg') }}" alt="FM Vec" />
+          <img class="star-vec" src="{{ url_for('static', filename='nervous_img2/star-vec.svg') }}" alt="Star Vec" />
+          <div class="text-wrapper-3">걱정</div>
+          <div class="text-wrapper-4">잔소리</div>
+          <img class="arr-vec" src="{{ url_for('static', filename='nervous_img2/arr-vec.svg') }}" alt="Arr Vec" />
+        </div>
+        <div class="text-wrapper-5">카드를 옆으로 넘겨보세요!</div>
+        <img class="arr" src="{{ url_for('static', filename='nervous_img2/arr-3.svg') }}" alt="Arr 3" />
+        <img class="img" src="{{ url_for('static', filename='nervous_img2/arr-2.svg') }}" alt="Arr 2" />
+        <img class="arr-2" src="{{ url_for('static', filename='nervous_img2/arr-1.svg') }}" alt="Arr 1" />
+        <img class="back-vec" src="{{ url_for('static', filename='nervous_img2/group-76.svg') }}" alt="Back Vec" onclick="goToCResult1()" />
+        <div class="text-wrapper-6">조마조마 주파수</div>
+      </div>
+    </div>
+  </body>
+</html>

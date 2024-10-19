@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='test_6.css') }}" />
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="group">
+        <div class="overlap-group"><div class="text-wrapper">06</div></div>
+      </div>
+
+      <p class="p">며칠 앓던 고민을 털어놓은 가족,<br />이 때 나의 반응은?</p>
+
+      <!-- 폼 태그 추가 -->
+      <form action="/tiebreaker_test_6_11" method="POST">
+        <div class="button-test1">
+          <button type="submit" name="tiebreaker_choice" value="curious" class="button-link">
+            <p class="button">
+              <span class="text-wrapper2">평소 궁금했던 것들</span><span class="span">을 마음껏<br /></span>
+              <span class="span">물어보며 이야기를 주도한다.</span>
+            </p>
+          </button>
+        </div>
+
+        <div class="button-test2">
+          <button type="submit" name="tiebreaker_choice" value="lively" class="button-link">
+            <p class="button">
+              <span class="span">가족들의 말에 공감하며,<br /></span>
+              <span class="text-wrapper2">큰 리액션</span><span class="span">을 담당한다.</span>
+            </p>
+          </button>
+        </div>
+
+        <div class="button-test3">
+          <button type="submit" name="tiebreaker_choice" value="ord" class="button-link">
+            <p class="button">
+              <span class="span">그동안</span> <span class="text-wrapper2">나에게 있었던 일들을<br /></span>
+              <span class="text-wrapper2">말해주느라</span> <span class="span">정신이 없다.</span>
+            </p>
+          </button>
+        </div>
+
+        <div class="button-test4">
+          <button type="submit" name="tiebreaker_choice" value="trust" class="button-link">
+            <p class="button">
+              <span class="span">먼저 대화를 시작하기보단,<br /></span>
+              <span class="text-wrapper2">가족들의 대화에 경청</span><span class="span">하는 편이다.</span>
+            </p>
+          </button>
+        </div>
+
+        <div class="button-test5">
+          <button type="submit" name="tiebreaker_choice" value="nervous" class="button-link">
+            <p class="button">
+              <span class="span">이 순간에도 거슬리고 걱정되는 게</span><br />
+              <span class="span">많아,</span> <span class="text-wrapper2">나도 모르게 잔소리꾼이 된다.</span>
+            </p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

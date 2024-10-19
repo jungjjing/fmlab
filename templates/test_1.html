@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='test_1.css') }}" />
+    <title>질문 1</title>
+</head>
+
+<body>
+    <div class="element">
+        <div class="div">
+            <div class="group">
+                <div class="overlap-group"><div class="text-wrapper">01</div></div>
+            </div>
+
+            <p class="p">며칠 앓던 고민을 털어놓은 가족,<br />이 때 나의 반응은?</p>
+
+            <!-- onsubmit 속성을 추가하여 setLabelValue(this) 호출 -->
+            <form action="/question1" method="POST" onsubmit="setLabelValue(this)">
+                <input type="hidden" name="label" value="" /> <!-- label 값을 저장할 숨겨진 필드 -->
+
+                <div class="button-test1">
+                    <button type="submit" name="choice" value="상세히 물어본다." class="button-link" data-label="curious">
+                        <p class="button">
+                            <span class="span">정확히 어떤 상황인지 알아야 할 것<br />같아, </span>
+                            <span class="text-wrapper2">더 상세히 물어본다.</span>
+                        </p>
+                    </button>
+                </div>
+
+                <div class="button-test2">
+                    <button type="submit" name="choice" value="내 이야기를 꺼내본다." class="button-link" data-label="ord">
+                        <p class="button">
+                            <span class="span">옛날 같은 고민을 했던 내가 떠올라,<br /></span>
+                            <span class="text-wrapper2">도움이 되고자 내 이야기를 꺼내본다.</span>
+                        </p>
+                    </button>
+                </div>
+
+                <div class="button-test3">
+                    <button type="submit" name="choice" value="공감하며 듣는다." class="button-link" data-label="lively">
+                        <p class="button">
+                            <span class="text-wrapper2">우선 열심히 공감</span><span class="span">해주며 듣는다.</span>
+                        </p>
+                    </button>
+                </div>
+
+                <div class="button-test4">
+                    <button type="submit" name="choice" value="진작 이야기하지." class="button-link" data-label="nervous">
+                        <p class="button">
+                            <span class="span">속상한 마음에,</span>
+                            <span class="text-wrapper2"> “진작 이야기하지”<br /></span>
+                            <span class="span">라며 한마디 한다.</span>
+                        </p>
+                    </button>
+                </div>
+
+                <div class="button-test5">
+                    <button type="submit" name="choice" value="잘 해결할 수 있을거라 생각." class="button-link" data-label="trust">
+                        <p class="button">
+                            <span class="span">OO이라면 </span>
+                            <span class="text-wrapper2">잘 해결할 수 있을거라<br /></span>
+                            <span class="span">속으로 생각한다.</span>
+                        </p>
+                    </button>
+                </div>
+            </form>
+
+            <script>
+                function setLabelValue(form) {
+                    const button = form.querySelector('button[type="submit"]:focus');
+                    if (button) {
+                        const label = button.getAttribute('data-label');
+                        form.querySelector('input[name="label"]').value = label;
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="n_result1.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='n_result1.css') }}" />
+</head>
+<script>
+  function goToStartPage() {
+      window.location.href = "{{ url_for('index') }}";
+    }
+</script>
+<body>
+  <div class="div-wrapper">
+    <div class="div">
+      <div class="group">
+        <div class="text-wrapper">내 카드 저장하기</div>
+        <div class="overlap-group">
+          <!-- 이미지 벡터 추가 -->
+          <img class="vector" src="{{ url_for('static', filename='nervous_img/vector-2.svg') }}" alt="Vector 2" />
+          <img class="img" src="{{ url_for('static', filename='nervous_img/vector-3.svg') }}" alt="Vector 3" />
+        </div>
+        <img class="vector-2" src="{{ url_for('static', filename='nervous_img/vector-4.svg') }}" alt="Vector 4" />
+      </div>
+      <div class="overlap">
+        <div class="text-wrapper-2">조마조마</div>
+        <div class="overlap-2">
+          <p class="p">가족의 모든 것을 걱정하는 주파수</p>
+          <img class="fm-vec" src="{{ url_for('static', filename='nervous_img/fm-vec.svg') }}" alt="FM Vector" />
+        </div>
+      </div>
+      <img class="img-vec" src="{{ url_for('static', filename='nervous_img/img-vec.svg') }}" alt="Image Vector" />
+      <img class="back-vec" src="{{ url_for('static', filename='nervous_img/back-vec.svg') }}" alt="Back Vector" onclick="goToStartPage()"/>
+      <div class="overlap-3">
+        <p class="div-2">
+          <span class="span">{{ username }}</span><span class="text-wrapper-3">의 </span>
+          <span class="span">연구카드</span>
+        </p>
+      </div>
+      <div class="overlap-4">
+        <div class="button-vec">
+          <!-- 비디오 벡터 추가 -->
+          <video src="{{ url_for('static', filename='nervous_img/button-video.mp4') }}" autoplay loop muted></video>
+        </div>
+        <a href="{{ url_for('n_result2') }}" class="text-wrapper-4" style="text-decoration: none;">조마조마 주파수 자세히 보기</a>
+      </div>
+      <div class="n-mov">
+        <!-- 비디오 추가 -->
+        <video src="{{ url_for('static', filename='nervous_img/n-mov.mp4') }}" autoplay loop muted></video>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

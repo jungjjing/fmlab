@@ -1,0 +1,243 @@
+/* 기본 설정 */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* .element 설정 */
+.element {
+  background-color: #ffffff; /* 여백의 배경색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* .div 설정 (가운데 배경 블록) */
+.element .div {
+  background-color: #d6e1f2; /* 가운데 배경색 */
+  width: 390px; /* 가운데 블록 너비 */
+  height: 844px; /* 가운데 블록 높이 */
+  position: relative;
+  overflow: hidden; /* 390px 너비를 넘어가는 부분을 잘라냄 */
+}
+  
+  .element .overlap {
+    position: absolute;
+    width: 393px;
+    height: 852px;
+    top: 1001px;
+    left: -21350px;
+    background-image: url(./curious_img3/large-vec.png);
+    background-size: 100% 100%;
+  }
+  
+  .element .large-vec {
+    position: absolute;
+    width: 393px;
+    height: 852px;
+    top: 0;
+    left: 0;
+  }
+  
+  .element .overlap-group {
+    position: absolute;
+    width: 340px;
+    height: 503px;
+    top: 152px;
+    left: 25px;
+    background-color: #9ec0f4;
+    border-radius: 15px;
+    box-shadow: 3px 4px 8.8px -1px #2a38514c;
+  }
+  
+  .element .tip-wrapper {
+    position: absolute;
+    width: 144px;
+    height: 33px;
+    top: 18px;
+    left: 98px;
+    background-image: url(./curious_img3/title-vec.svg);
+    background-size: 100% 100%;
+  }
+  
+  .element .tip {
+    position: absolute;
+    width: 109px;
+    top: -10px;
+    left: 17px;
+    font-family: "Pretendard-Bold", Helvetica;
+    font-weight: 400;
+    color: #2a3851;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .text-wrapper {
+    font-weight: 700;
+  }
+  
+  .element .span {
+    font-family: "Pretendard-ExtraBold", Helvetica;
+    font-weight: 800;
+  }
+  
+  .element .overlap-2 {
+    position: absolute;
+    width: 268px;
+    height: 241px;
+    top: 79px;
+    left: 48px;
+  }
+  
+  .element .bollon-vec {
+    position: absolute;
+    width: 198px;
+    height: 241px;
+    top: 0;
+    left: 23px;
+  }
+  
+  .element .p {
+    width: 250px;
+    top: 1px;
+    left: 0;
+    font-family: "Pretendard-Bold", Helvetica;
+    font-weight: 400;
+    color: #2e3d58;
+    font-size: 14px;
+    line-height: 28px;
+    position: absolute;
+    letter-spacing: 0;
+  }
+  
+  .element .text-wrapper-2 {
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .element .text-wrapper-3 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .element .text-wrapper-4 {
+    font-family: "Pretendard-ExtraBold", Helvetica;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  
+  .element .div-2 {
+    width: 268px;
+    top: 131px;
+    left: 0;
+    font-family: "Pretendard-Bold", Helvetica;
+    font-weight: 400;
+    color: #2e3d58;
+    font-size: 14px;
+    line-height: 28px;
+    position: absolute;
+    letter-spacing: 0;
+  }
+  
+  .element .line {
+    top: 109px;
+    left: 4px;
+    position: absolute;
+    width: 243px;
+    height: 1px;
+    object-fit: cover;
+  }
+  
+  .element .div-3 {
+    width: 250px;
+    top: 340px;
+    left: 48px;
+    font-family: "Pretendard-Bold", Helvetica;
+    font-weight: 400;
+    color: #2e3d58;
+    font-size: 14px;
+    line-height: 28px;
+    position: absolute;
+    letter-spacing: 0;
+  }
+  
+  .element .fm-group {
+    position: absolute;
+    width: 40px;
+    height: 17px;
+    top: 459px;
+    left: 151px;
+  }
+  
+  .element .line-vec {
+    top: 330px;
+    left: 52px;
+    position: absolute;
+    width: 243px;
+    height: 1px;
+    object-fit: cover;
+  }
+  
+  .element .side-rect {
+    position: absolute;
+    width: 340px;
+    height: 503px;
+    top: 152px;
+    left: -327px;
+    background-color: #75a1e366;
+    border-radius: 15px;
+    box-shadow: 3px 4px 8.8px -1px #2a38514c;
+  }
+  
+  .element .back-vector {
+    position: absolute;
+    width: 16px;
+    height: 23px;
+    top: 100px;
+    left: 340px;
+  }
+  
+  .element .text-wrapper-5 {
+    top: 100px;
+    left: 135px;
+    font-family: "Pretendard-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #2a3851;
+    font-size: 19px;
+    line-height: normal;
+    position: absolute;
+    letter-spacing: 0;
+  }
+  
+  .element .arr {
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    top: 675px;
+    left: 44px;
+  }
+  
+  .element .img {
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    top: 675px;
+    left: 62px;
+  }
+  
+  .element .arr-2 {
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    top: 675px;
+    left: 80px;
+  }
+  

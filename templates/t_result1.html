@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='t_result1.css') }}" />
+  <script>
+    // back-vec을 클릭했을 때 start_3.html로 이동하는 함수
+    function goToStartPage() {
+      window.location.href = "{{ url_for('index') }}";
+    }
+  </script>
+</head>
+<body>
+  <div class="div-wrapper">
+    <div class="overlap-wrapper">
+      <div class="overlap">
+        <img class="img-vec" src="{{ url_for('static', filename='trust_img/img-vec.svg') }}" alt="Image Vector" />
+        <div class="group">
+          <div class="text-wrapper">내 카드 저장하기</div>
+          <div class="overlap-group">
+            <img class="vector" src="{{ url_for('static', filename='trust_img/vector-2.svg') }}" alt="Vector 2" />
+            <img class="img" src="{{ url_for('static', filename='trust_img/vector-3.svg') }}" alt="Vector 3" />
+          </div>
+          <img class="vector-2" src="{{ url_for('static', filename='trust_img/vector-4.svg') }}" alt="Vector 4" />
+        </div>
+        <div class="div">
+          <div class="text-wrapper-2">믿음직</div>
+          <div class="overlap-2">
+            <div class="text-wrapper-3">가족에게 신뢰가 가득한 주파수</div>
+            <img class="fm-vec" src="{{ url_for('static', filename='trust_img/fm-vec.svg') }}" alt="FM Vector" />
+          </div>
+        </div>
+        <div class="overlap-3">
+          <div class="button-video">
+            <video src="{{ url_for('static', filename='trust_img/button-video.mp4') }}" autoplay loop muted></video>
+          </div>
+          <a href="{{ url_for('t_result2') }}" class="text-wrapper-4" style="text-decoration: none;">믿음직 주파수 자세히 보기</a>
+        </div>
+        <img class="back-vec" src="{{ url_for('static', filename='trust_img/back-vec.svg') }}" alt="Back Vector" onclick="goToStartPage()" />
+        <div class="mov-vec">
+          <video src="{{ url_for('static', filename='trust_img/mov-vec.mp4') }}" autoplay loop muted></video>
+        </div>
+        <div class="overlap-4">
+          <p class="p">
+            <span class="span">{{ username }}</span><span class="text-wrapper-5">의 </span>
+            <span class="span">연구카드</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

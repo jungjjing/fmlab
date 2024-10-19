@@ -1,0 +1,263 @@
+/* 기본 설정 */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* .div-wrapper 설정 */
+.div-wrapper {
+  background-color: #ffffff; /* 전체 페이지의 배경색을 흰색으로 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* .overlap-wrapper 설정 (휴대폰 크기) */
+.div-wrapper .overlap-wrapper {
+  background-color: #ffffff; /* 지정된 크기 영역에만 적용되는 배경색 */
+  width: 390px; /* 휴대폰 너비 */
+  height: 844px; /* 휴대폰 높이 */
+  position: relative;
+}
+
+  .div-wrapper .overlap {
+    position: relative;
+    height: 844px;
+    background-image: url(./trust_img/large-vec.png);
+    background-size: 100% 100%;
+  }
+  
+  .div-wrapper .img-vec {
+    position: absolute;
+    width: 70px;
+    height: 21px;
+    top: 184px;
+    left: 159px;
+  }
+  
+  .div-wrapper .group {
+    position: absolute;
+    width: 168px;
+    height: 28px;
+    top: 648px;
+    left: 113px;
+    opacity: 0.8;
+  }
+  
+  .div-wrapper .text-wrapper {
+    top: 0;
+    left: 36px;
+    font-family: "Pretendard-Bold", Helvetica;
+    font-weight: 700;
+    color: #5e4260;
+    font-size: 19px;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .div-wrapper .overlap-group {
+    position: absolute;
+    width: 21px;
+    height: 19px;
+    top: 2px;
+    left: 2px;
+  }
+  
+  .div-wrapper .vector {
+    position: absolute;
+    width: 21px;
+    height: 10px;
+    top: 9px;
+    left: 0;
+  }
+  
+  .div-wrapper .img {
+    position: absolute;
+    width: 3px;
+    height: 18px;
+    top: 0;
+    left: 9px;
+  }
+  
+  .div-wrapper .vector-2 {
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    top: 27px;
+    left: -2px;
+  }
+  
+  .div-wrapper .div {
+    position: absolute;
+    width: 276px;
+    height: 98px;
+    top: 253px;
+    left: 34px;
+  }
+  
+  .div-wrapper .text-wrapper-2 {
+    top: 0;
+    left: 121px;
+    font-family: "Pretendard-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #685269;
+    font-size: 32px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .div-wrapper .overlap-2 {
+    position: absolute;
+    width: 276px;
+    height: 97px;
+    top: 1px;
+    left: 0;
+  }
+  
+  .div-wrapper .text-wrapper-3 {
+    top: 51px;
+    left: 49px;
+    font-family: "Pretendard-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #685269;
+    font-size: 18px;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .div-wrapper .fm-vec {
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    top: 0;
+    left: 0;
+  }
+  
+  .div-wrapper .overlap-3 {
+    position: absolute;
+    width: 254px;
+    height: 50px;
+    top: 569px;
+    left: 66px;
+  }
+  
+  .div-wrapper .button-video {
+    position: absolute;
+    width: 254px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    border-radius: 15px;
+    overflow: hidden; /* 비디오가 경계를 넘지 않도록 설정 */
+  }
+  
+  .div-wrapper .button-video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* 비디오에도 동일한 border-radius 적용 */
+    object-fit: cover;
+  }
+  /*
+  .div-wrapper .button-video {
+    position: absolute;
+    width: 254px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  */
+  .div-wrapper .text-wrapper-4 {
+    top: 14px;
+    left: 40px;
+    font-family: "Pretendard-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 17px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .div-wrapper .back-vec {
+    position: absolute;
+    width: 16px;
+    height: 22px;
+    top: 100px;
+    left: 42px;
+  }
+  
+  .div-wrapper .mov-vec {
+    position: absolute;
+    width: 256px;
+    height: 175px;
+    top: 377px;
+    left: 67px;
+    background-color: #000000f2;
+    border-radius: 15px;
+    overflow: hidden; /* 비디오가 경계를 넘지 않도록 설정 */
+  }
+  
+  .div-wrapper .mov-vec video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* 비디오에도 동일한 border-radius 적용 */
+  }
+  /*
+  .div-wrapper .mov-vec {
+    position: absolute;
+    width: 256px;
+    height: 175px;
+    top: 377px;
+    left: 67px;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  */
+  .div-wrapper .overlap-4 {
+    position: absolute;
+    width: 144px;
+    height: 33px;
+    top: 94px;
+    left: 123px;
+    background-image: url(./trust_img/title-vec.svg);
+    background-size: 100% 100%;
+  }
+  
+  .div-wrapper .p {
+    top: -9px;
+    left: 18px;
+    font-family: "Pretendard-ExtraBold", Helvetica;
+    font-weight: 400;
+    color: #f4f4f4;
+    font-size: 17px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .div-wrapper .span {
+    font-weight: 800;
+  }
+  
+  .div-wrapper .text-wrapper-5 {
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-weight: 600;
+  }
+  

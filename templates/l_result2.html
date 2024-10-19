@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="l_result2.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='l_result2.css') }}" />
+  <script>
+      let isDragging = false;
+    // 마우스가 눌렸을 때 드래그 시작
+    window.addEventListener('mousedown', function() {
+      isDragging = true;
+    });
+    // 마우스를 움직일 때 드래그 중이면 페이지 이동
+    window.addEventListener('mousemove', function(event) {
+      if (isDragging) {
+        window.location.href = "{{ url_for('l_result3') }}";
+      }
+    });
+    // 마우스 버튼을 놓았을 때 드래그 종료
+    window.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+    //이거 위로 지워지워
+    
+    let lastScrollLeft = 0;
+
+    // 스크롤 방향 감지 및 스크롤 이벤트 처리
+    window.addEventListener('scroll', function() {
+      let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      if (scrollLeft < lastScrollLeft) {
+        // 왼쪽으로 스크롤되면 l_result3.html로 이동
+        window.location.href = "{{ url_for('l_result3') }}";
+      }
+      lastScrollLeft = scrollLeft;
+    }, false);
+
+    // group-76.svg 클릭 시 l_result1.html로 이동하는 함수
+    function goToLResult1() {
+      window.location.href = "{{ url_for('l_result1') }}";
+    }
+  </script>
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="overlap">
+        <div class="overlap-group">
+          <div class="overlap-group-2">
+            <img class="mid-vec" src="{{ url_for('static', filename='lively_img2/mid-vec-2.svg') }}" />
+            <img class="img" src="{{ url_for('static', filename='lively_img2/mid-vec.svg') }}" />
+            <img class="livelly-vec" src="{{ url_for('static', filename='lively_img2/livelly-vec.svg') }}" />
+            <div class="text-wrapper">과잉</div>
+            <div class="text-wrapper-2">가벼움</div>
+            <img class="mid-arr" src="{{ url_for('static', filename='lively_img2/mid-arr.svg') }}" />
+            <p class="p">
+              <span class="span">가족에게 하는 </span>
+              <span class="text-wrapper-3">과한 리액션</span><span class="span">이<br />가족의 입장에서 </span>
+              <span class="text-wrapper-3">가볍게 느껴지는</span>
+              <span class="span"> <br />오류가 발생할 수 있다.</span>
+            </p>
+            <img class="side-vec" src="{{ url_for('static', filename='lively_img2/side-vec.svg') }}" />
+            <img class="title-vec" src="{{ url_for('static', filename='lively_img2/title-vec.svg') }}" />
+            <div class="text-wrapper-4">발생 오류</div>
+            <img class="fm-vec" src="{{ url_for('static', filename='lively_img2/fm-vec.svg') }}" />
+          </div>
+          <div class="text-wrapper-5">카드를 옆으로 넘겨보세요!</div>
+        </div>
+        <img class="arr" src="{{ url_for('static', filename='lively_img2/arr-3.svg') }}" />
+        <img class="arr-2" src="{{ url_for('static', filename='lively_img2/arr-2.svg') }}" />
+        <img class="arr-3" src="{{ url_for('static', filename='lively_img2/arr-1.svg') }}" />
+      </div>
+      <img class="back-vec" src="{{ url_for('static', filename='lively_img2/group-76.svg') }}" onclick="goToLResult1()" />
+      <div class="text-wrapper-6">깨발랄 주파수</div>
+   

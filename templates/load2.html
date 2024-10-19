@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='load2.css') }}" />
+
+    <!-- 3초 후 자동 리다이렉트 설정 -->
+    <meta http-equiv="refresh" content="3; url={{ next_page }}" />
+  </head>
+  <body>
+    <div class="element">
+      <div class="div-wrapper"><div class="text-wrapper">주파수 연구카드 발급 완료!</div></div>
+    </div>
+  </body>
+</html>

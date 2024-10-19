@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='c_result3.css') }}" />
+  <script>
+    let lastScrollLeft = 0;
+
+    // 스크롤 방향 감지 및 스크롤 이벤트 처리
+    window.addEventListener('scroll', function() {
+      let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      if (scrollLeft > lastScrollLeft) {
+        // 오른쪽으로 스크롤되면 c_result2.html로 이동
+        window.location.href = "{{ url_for('c_result2') }}";
+      }
+      lastScrollLeft = scrollLeft;
+    }, false);
+
+    // group-76.svg 클릭 시 c_result1.html로 이동하는 함수
+    function goToCResult1() {
+      window.location.href = "{{ url_for('c_result1') }}";
+    }
+  </script>
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="overlap">
+        <img class="large-vec" src="{{ url_for('static', filename='img/large-vec.png') }}" alt="Large Vec" />
+      </div>
+      <div class="overlap-group">
+        <div class="tip-wrapper">
+          <p class="tip"><span class="text-wrapper">오류 감소 </span> <span class="span">tip</span></p>
+        </div>
+        <div class="overlap-2">
+          <img class="bollon-vec" src="{{ url_for('static', filename='curious_img3/bollon-vec.svg') }}" alt="Bollon Vec" />
+          <p class="p">
+            <span class="text-wrapper">01<br /></span>
+            <span class="text-wrapper-2">가족에 대해 </span>
+            <span class="text-wrapper-4">모든 것을 알지 않아도 괜찮다</span>
+            <span class="text-wrapper-2">는 것을 기억한다.</span>
+          </p>
+          <p class="div-2">
+            <span class="text-wrapper">02<br /></span>
+            <span class="text-wrapper-2">말하기 전, </span>
+            <span class="text-wrapper-4">혹시 내 관심이 귀찮게<br />느껴지진 않을지</span>
+            <span class="text-wrapper-2">생각해 본다.</span>
+          </p>
+          <img class="line" src="{{ url_for('static', filename='curious_img3/line-vec2.png') }}" alt="Line Vec 2" />
+        </div>
+        <p class="div-3">
+          <span class="text-wrapper">03<br /></span>
+          <span class="text-wrapper-4">반복적인 표현 시,</span>
+          <span class="text-wrapper-2">오류 발생 확률이 높아지니 주의해야 한다.</span>
+        </p>
+        <img class="fm-group" src="{{ url_for('static', filename='curious_img3/fm-group.png') }}" alt="FM Group" />
+        <img class="line-vec" src="{{ url_for('static', filename='curious_img3/line-vec1.png') }}" alt="Line Vec 1" />
+      </div>
+      <div class="side-rect"></div>
+      <!-- group-76.svg 클릭 시 c_result1.html로 이동 -->
+      <img class="back-vector" src="{{ url_for('static', filename='curious_img3/group-76.svg') }}" alt="Back Vector" onclick="goToCResult1()" />
+      <div class="text-wrapper-5">궁금궁금 주파수</div>
+      <img class="arr" src="{{ url_for('static', filename='curious_img3/arr-3.svg') }}" alt="Arr 3" />
+      <img class="img" src="{{ url_for('static', filename='curious_img3/arr-2.svg') }}" alt="Arr 2" />
+      <img class="arr-2" src="{{ url_for('static', filename='curious_img3/arr-1.svg') }}" alt="Arr 1" />
+    </div>
+  </div>
+</body>
+</html>

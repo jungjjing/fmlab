@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='c_result2.css') }}" />
+    <script>
+      let isDragging = false;
+    // 마우스가 눌렸을 때 드래그 시작
+    window.addEventListener('mousedown', function() {
+      isDragging = true;
+    });
+    // 마우스를 움직일 때 드래그 중이면 페이지 이동
+    window.addEventListener('mousemove', function(event) {
+      if (isDragging) {
+        window.location.href = "{{ url_for('c_result3') }}";
+      }
+    });
+    // 마우스 버튼을 놓았을 때 드래그 종료
+    window.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+    //이거 위로 지워지워
+      let lastScrollLeft = 0;
+
+      // 스크롤 방향 감지 및 스크롤 이벤트 처리
+      window.addEventListener('scroll', function() {
+        let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        if (scrollLeft < lastScrollLeft) {
+          // 왼쪽으로 스크롤되면 c_result3.html로 이동
+          window.location.href = "{{ url_for('c_result3') }}";
+        }
+        lastScrollLeft = scrollLeft;
+      }, false);
+
+      // group-76.svg 클릭 시 c_result1.html로 이동하는 함수
+      function goToCResult1() {
+        window.location.href = "{{ url_for('c_result1') }}";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+        <div class="overlap">
+          <img class="large-vector" src="{{ url_for('static', filename='img/large-vector.png') }}" alt="Large Vector" />
+        </div>
+        <div class="overlap-group">
+          <div class="div-wrapper">
+            <div class="text-wrapper">발생 오류</div>
+          </div>
+          <div class="overlap-2">
+            <img class="bollon-vector" src="{{ url_for('static', filename='curious_img2/bollon-vector.svg') }}" alt="Bollon Vector" />
+            <div class="text-wrapper-2">관심</div>
+            <div class="text-wrapper-3">귀찮음</div>
+            <div class="arr-group">
+              <div class="overlap-group-2">
+                <div class="arr"></div>
+                <img class="img" src="{{ url_for('static', filename='curious_img2/arr-1.svg') }}" alt="Arrow" />
+              </div>
+            </div>
+          </div>
+          <p class="p">
+            <span class="span">가족을 향한 </span>
+            <span class="text-wrapper-4">관심</span><span class="span">이<br />가족의 입장에서 </span>
+            <span class="text-wrapper-4">귀찮게 느껴지는<br /></span>
+            <span class="span">오류가 발생할 수 있다.</span>
+          </p>
+          <img class="fm-group" src="{{ url_for('static', filename='curious_img2/fm-group.png') }}" alt="FM Group" />
+        </div>
+        <div class="text-wrapper-5">카드를 옆으로 넘겨보세요!</div>
+        <img class="triangle" src="{{ url_for('static', filename='curious_img2/triangle-3.svg') }}" alt="Triangle 3" />
+        <img class="triangle-2" src="{{ url_for('static', filename='curious_img2/triangle-2.svg') }}" alt="Triangle 2" />
+        <img class="triangle-3" src="{{ url_for('static', filename='curious_img2/triangle-1.svg') }}" alt="Triangle 1" />
+        <div class="side-rect"></div>
+        <!-- group-76.svg를 클릭하면 c_result1.html로 이동 -->
+        <img class="back-vector" src="{{ url_for('static', filename='curious_img2/group-76.svg') }}" alt="Back Vector" onclick="goToCResult1()" />
+        <div class="text-wrapper-6">궁금궁금 주파수</div>
+      </div>
+    </div>
+  </body>
+</html>

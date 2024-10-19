@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='start_2.css') }}" />
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="overlap">
+        <div class="overlap-group">
+          <img class="li-vect" src="{{ url_for('static', filename='start_img2/li-vect.svg') }}" />
+          <img class="layer" src="{{ url_for('static', filename='start_img2/layer-1.svg') }}" />
+          <img class="img" src="{{ url_for('static', filename='start_img2/layer-2.svg') }}" />
+        </div>
+        <img class="or-vect" src="{{ url_for('static', filename='start_img2/or-vect.svg') }}" />
+      </div>
+      <div class="overlap-2">
+        <div class="overlap-3">
+          <div class="overlap-group-2">
+            <img class="ne-vect" src="{{ url_for('static', filename='start_img2/ne-vect.svg') }}" />
+            <img class="layer-2" src="{{ url_for('static', filename='start_img2/layer-3.svg') }}" />
+            <img class="layer-3" src="{{ url_for('static', filename='start_img2/layer-4.svg') }}" />
+          </div>
+          <img class="layer-4" src="{{ url_for('static', filename='start_img2/layer-5.svg') }}" />
+        </div>
+        <img class="cu-vect" src="{{ url_for('static', filename='start_img2/cu-vect.svg') }}" />
+      </div>
+      <img class="tr-vect" src="{{ url_for('static', filename='start_img2/tr-vect.svg') }}" />
+      <p class="FM">
+        <span class="text-wrapper">
+          주파수연구소 FM에서<br />나는 평소 가족에게 어떤 표현을<br />하는 유형인지 연구해보고,<br />
+        </span>
+        <span class="span">주파수 연구카드</span><span class="text-wrapper">를 발급받아 보세요.<br /></span>
+        <span class="span"><br />나의 주파수에서는 어떤 오류가<br />주로 발생할까요?</span>
+      </p>
+      
+      <!-- 폼 태그 추가 -->
+      <form action="/start_2" method="POST">
+        <button type="submit" class="button-vec">
+          <div class="text-wrapper-2">연구 시작하기</div>
+        </button>
+      </form>
+      
+    </div>
+  </div>
+</body>
+</html>

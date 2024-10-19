@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="l_result3.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='l_result3.css') }}" />
+  <script>
+    let lastScrollLeft = 0;
+
+    // 스크롤 방향 감지 및 스크롤 이벤트 처리
+    window.addEventListener('scroll', function() {
+      let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      if (scrollLeft > lastScrollLeft) {
+        // 오른쪽으로 스크롤되면 l_result2.html로 이동
+        window.location.href = "{{ url_for('l_result2') }}";
+      }
+      lastScrollLeft = scrollLeft;
+    }, false);
+
+    // group-76.svg 클릭 시 l_result1.html로 이동하는 함수
+    function goToLResult1() {
+      window.location.href = "{{ url_for('l_result1') }}";
+    }
+  </script>
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="overlap-group">
+        <img class="mid-vec" src="{{ url_for('static', filename='lively_img3/mid-vec.svg') }}" />
+        <img class="lively-vec" src="{{ url_for('static', filename='lively_img3/lively-vec-2.svg') }}" />
+        <img class="img" src="{{ url_for('static', filename='lively_img3/lively-vec.svg') }}" />
+        <p class="p">
+          <span class="text-wrapper">01<br /></span>
+          <span class="span">충분한 고민 후 차분하게 진심을<br />전달</span>
+          <span class="text-wrapper-2">해보는 것도 좋은 방법이다.</span>
+        </p>
+        <p class="div-2">
+          <span class="text-wrapper-3">02<br /></span>
+          <span class="text-wrapper-4">말하기 전, </span>
+          <span class="text-wrapper-5">혹시</span>
+          <span class="text-wrapper-5">나의 리액션이<br /></span>
+          <span class="text-wrapper-7">가볍게 전달되진 않을지</span>
+          <span class="text-wrapper-9">생각해본다</span><span class="text-wrapper-4">.</span>
+        </p>
+        <p class="div-3">
+          <span class="text-wrapper">03<br /></span>
+          <span class="span">반복적인 표현 시,</span>
+          <span class="text-wrapper-2"> 오류 발생 확률이<br />높아지니 주의해야 한다.</span>
+        </p>
+        <img class="side-vec" src="{{ url_for('static', filename='lively_img3/side-vec.svg') }}" />
+        <img class="title-vec" src="{{ url_for('static', filename='lively_img3/title-vec.svg') }}" />
+        <div class="text-wrapper-10">오류 감소 tip</div>
+        <img class="fm-vec" src="{{ url_for('static', filename='lively_img3/fm-vec.svg') }}" />
+        <img class="line-vec" src="{{ url_for('static', filename='lively_img3/line-vec-2.png') }}" />
+        <img class="line-vec-2" src="{{ url_for('static', filename='lively_img3/line-vec-1.png') }}" />
+      </div>
+      <img class="back-vec" src="{{ url_for('static', filename='lively_img3/group-76.svg') }}" onclick="goToLResult1()" />
+      <div class="text-wrapper-11">깨발랄 주파수</div>
+      <img class="arr" src="{{ url_for('static', filename='lively_img3/arr-3.svg') }}" />
+      <img class="arr-2" src="{{ url_for('static', filename='lively_img3/arr-2.svg') }}" />
+      <img class="arr-3" src="{{ url_for('static', filename='lively_img3/arr-1.svg') }}" />
+    </div>
+  </div>
+</body>
+</html>

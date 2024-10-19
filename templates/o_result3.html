@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='o_result3.css') }}" />
+    <script>
+      let lastScrollLeft = 0;
+
+      // 스크롤 방향 감지 및 스크롤 이벤트 처리
+      window.addEventListener('scroll', function() {
+        let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        if (scrollLeft > lastScrollLeft) {
+          // 오른쪽으로 스크롤되면 o_result2.html로 이동
+          window.location.href = "{{ url_for('o_result2') }}";
+        }
+        lastScrollLeft = scrollLeft;
+      }, false);
+
+      // group-76.svg 클릭 시 o_result1.html로 이동하는 함수
+      function goToOResult1() {
+        window.location.href = "{{ url_for('o_result1') }}";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+        <img class="large-vec" src="{{ url_for('static', filename='ord_img3/large-vec.png') }}" />
+        <div class="overlap-group">
+          <img class="mid-vec" src="{{ url_for('static', filename='ord_img3/mid-vec.svg') }}" />
+          <img class="layer-vec" src="{{ url_for('static', filename='ord_img3/layer-vec.svg') }}" />
+          <p class="p">
+            <span class="text-wrapper">01<br /></span>
+            <span class="span">상대의 말에 먼저 귀 기울이는 것</span><span class="text-wrapper-2">이 상대에게 도움이 되기도 한다.</span>
+          </p>
+          <p class="div-2">
+            <span class="text-wrapper">02<br /></span>
+            <span class="text-wrapper-2">말하기 전, 혹시</span>
+            <span class="span">내 조언이 지루하게<br />전달되지 않을지</span>
+            <span class="text-wrapper-2"> 다시 생각해 본다.</span>
+          </p>
+          <p class="div-3">
+            <span class="text-wrapper">03<br /></span>
+            <span class="span">반복적인 표현 시,</span>
+            <span class="text-wrapper-2">오류 발생 확률이<br />높아지니 주의해야 한다.</span>
+          </p>
+          <img class="side-vec" src="{{ url_for('static', filename='ord_img3/side-vec.svg') }}" />
+          <img class="title-vec" src="{{ url_for('static', filename='ord_img3/title-vec.svg') }}" />
+          <div class="text-wrapper-4">오류 감소 tip</div>
+          <img class="fm-vec" src="{{ url_for('static', filename='ord_img3/fm-vec.svg') }}" />
+          <img class="line-vec" src="{{ url_for('static', filename='ord_img3/line-vec-2.png') }}" />
+          <img class="img" src="{{ url_for('static', filename='ord_img3/line-vec.png') }}" />
+        </div>
+        <img class="back-vec" src="{{ url_for('static', filename='ord_img3/group-76.svg') }}" onclick="goToOResult1()" />
+        <div class="text-wrapper-5">라떼는 주파수</div>
+        <img class="arr" src="{{ url_for('static', filename='ord_img3/arr-3.svg') }}" />
+        <img class="arr-2" src="{{ url_for('static', filename='ord_img3/arr-2.svg') }}" />
+        <img class="arr-3" src="{{ url_for('static', filename='ord_img3/arr-1.svg') }}" />
+      </div>
+    </div>
+  </body>
+</html>

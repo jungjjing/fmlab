@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='test_6.css') }}" />
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="group">
+        <div class="overlap-group"><div class="text-wrapper">06</div></div>
+      </div>
+
+      <p class="p">오랜만의 가족 외식,<br />여러 대화가 오가는데, 이 때 나는?</p>
+
+      <!-- 폼 태그 추가 -->
+      <form action="/tiebreaker_test_6_1" method="POST">
+        <div class="button-test1">
+          <button type="submit" name="tiebreaker_choice" value="curious" class="button-link">
+            <p class="button">
+              <span class="text-wrapper2">평소 궁금했던 것들</span><span class="span">을 마음껏<br /></span>
+              <span class="span">물어보며 이야기를 주도한다.</span>
+            </p>
+          </button>
+        </div>
+
+        <div class="button-test2">
+          <button type="submit" name="tiebreaker_choice" value="lively" class="button-link">
+            <p class="button">
+              <span class="span">가족들의 말에 공감하며,<br /></span>
+              <span class="text-wrapper2">큰 리액션</span><span class="span">을 담당한다.</span>
+            </p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

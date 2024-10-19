@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='c_result1.css') }}" />
+</head>
+<script>
+  // back-vec을 클릭했을 때 start_3.html로 이동하는 함수
+  function goToStartPage() {
+    window.location.href = "{{ url_for('index') }}";
+  }
+</script>
+<body>
+  <div class="div-wrapper">
+    <div class="overlap-wrapper">
+      <div class="overlap">
+        <div class="text-wrapper">궁금궁금</div>
+        <p class="div">가족의 모든 것이 궁금한 주파수</p>
+        <img class="back-vec" src="{{ url_for('static', filename='curious_img/back-vec.svg') }}" onclick="goToStartPage()"/>
+        <img class="bollon-vec" src="{{ url_for('static', filename='curious_img/bollon-vec.svg') }}" />
+        <div class="overlap-group">
+          <img class="img-vec" src="{{ url_for('static', filename='curious_img/img-vec.png') }}" />
+          <div class="overlap-2">
+            <img class="fm-vec" src="{{ url_for('static', filename='curious_img/fm-vec.png') }}" />
+            <div class="title-vec"></div>
+            <p class="p">
+              <span class="span">{{ username }}</span><span class="text-wrapper-2">의 </span>
+              <span class="span">연구카드</span>
+            </p>
+          </div>
+        </div>
+        <div class="down-vec">
+          <div class="text-wrapper-3">내 카드 저장하기</div>
+          <div class="overlap-group-2">
+            <img class="vector" src="{{ url_for('static', filename='curious_img/vector-2.svg') }}" />
+            <img class="img" src="{{ url_for('static', filename='curious_img/vector-3.svg') }}" />
+          </div>
+          <img class="vector-2" src="{{ url_for('static', filename='curious_img/vector-4.svg') }}" />
+        </div>
+        <div class="overlap-3">
+          <div class="mov-vec">
+            <video src="{{ url_for('static', filename='curious_img/mov.mp4') }}" autoplay loop muted></video>
+          </div>
+          <div class="button-vec">
+            <video src="{{ url_for('static', filename='curious_img/button-video.mp4') }}" autoplay loop muted></video>
+          </div>
+          <!-- a 태그 추가하여 c_result2.html로 이동 -->
+          <a href="{{ url_for('c_result2') }}" class="text-wrapper-4" style="text-decoration: none;">궁금궁금 주파수 자세히 보기</a>
+          <div class="frame-vec"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

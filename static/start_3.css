@@ -1,0 +1,111 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  background-color: #f4f4f4;
+  width: 390px;
+  height: 844px;
+  position: relative;
+}
+
+.screen .text-wrapper {
+  width: 250px;
+  top: 168px;
+  left: 70px;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  position: absolute;
+  color: #303142;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.screen .text-wrapper-2 {
+  width: 202px;
+  top: 376px;
+  left: 98px;
+  opacity: 0.9;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  white-space: nowrap;
+  position: absolute;
+  color: #303142;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.screen .line-vec {
+  position: absolute;
+  width: 179px;
+  height: 3px;
+  top: 364px;
+  left: 108px;
+}
+
+/* 입력 필드 스타일 */
+.input-field {
+  position: absolute;
+  top: 326px;
+  left: 108px;
+  width: 170px;
+  height: 28px;
+  font-size: 18px; /* 폰트 크기를 키움 */
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #303142;
+  background-color: transparent;
+  color: #303142;
+  outline: none;
+  text-align: center; /* 텍스트를 중앙 정렬 */
+}
+
+/* 버튼 스타일 */
+.screen .button-vec {
+  display: flex;
+  width: 120px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 432px;
+  left: 138px;
+  background-color: #303142;
+  border-radius: 30px;
+  box-shadow: 1px 1px 8.3px -1px #3031424c;
+  cursor: pointer;
+  transition: background-color 0.8s ease, transform 0.8s ease;
+}
+
+.screen .button-vec:hover {
+  background-color: #f4f4f4; /* 마우스 오버 시 배경색 변경 */
+  transform: scale(1.05); /* 마우스 오버 시 살짝 커지는 효과 */
+  box-shadow: 2px 2px 10px 0px #50506080; /* 그림자 변경 */
+}
+
+.screen .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-weight: 700;
+  color: #f4f4f4;
+  font-size: 19px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 27px;
+  white-space: nowrap;
+}

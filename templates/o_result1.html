@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="o_result1.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='o_result1.css') }}" />
+  <script>
+    function goToStartPage() {
+      window.location.href = "{{ url_for('index') }}";
+    }
+
+    // 라떼는 주파수 자세히 보기 클릭 시 o_result2.html로 이동하는 함수
+    function goToOResult2() {
+      window.location.href = "{{ url_for('o_result2') }}";
+    }
+  </script>
+</head>
+<body>
+  <div class="div-wrapper">
+    <div class="div">
+      <div class="group">
+        <div class="text-wrapper">내 카드 저장하기</div>
+        <div class="overlap-group">
+          <!-- 이미지 벡터 추가 -->
+          <img class="vector" src="{{ url_for('static', filename='ord_img/vector-2.svg') }}" alt="Vector 2" />
+          <img class="img" src="{{ url_for('static', filename='ord_img/vector-3.svg') }}" alt="Vector 3" />
+        </div>
+        <img class="vector-2" src="{{ url_for('static', filename='ord_img/vector-4.svg') }}" alt="Vector 4" />
+      </div>
+      <div class="text-wrapper-2">라떼는</div>
+      <div class="text-wrapper-3">가족에게 도움을 주고싶은 주파수</div>
+      <img class="back-vec" src="{{ url_for('static', filename='ord_img/back-vec.svg') }}" alt="Back Vector" onclick="goToStartPage()"/>
+      <div class="overlap">
+        <img class="img-vec" src="{{ url_for('static', filename='ord_img/img-vec.svg') }}" alt="Image Vector" />
+        <div class="overlap-2">
+          <img class="fm-vec" src="{{ url_for('static', filename='ord_img/fm-vec.svg') }}" alt="FM Vector" />
+          <div class="title-vec"></div>
+          <p class="p">
+            <span class="span">{{ username }}</span><span class="text-wrapper-4">의 </span>
+            <span class="span">연구카드</span>
+          </p>
+        </div>
+      </div>
+      <div class="mov-vec">
+        <!-- 비디오 추가 -->
+        <video src="{{ url_for('static', filename='ord_img/mov-vec.mp4') }}" autoplay loop muted></video>
+      </div>
+      <div class="overlap-3">
+        <div class="button-video">
+          <!-- 비디오 추가 -->
+          <video src="{{ url_for('static', filename='ord_img/button-video.mp4') }}" autoplay loop muted></video>
+        </div>
+        <div class="text-wrapper-5" onclick="goToOResult2()" style="text-decoration: none;">라떼는 주파수 자세히 보기</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

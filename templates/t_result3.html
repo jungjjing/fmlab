@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="t_result3.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='t_result3.css') }}" />
+  <script>
+    let lastScrollTop = 0;
+    let isDragging = false;
+    let startY;
+
+    // 스크롤 방향 감지 및 스크롤 이벤트 처리
+    window.addEventListener('scroll', function() {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st < lastScrollTop) {
+        // 스크롤이 위로 이동하면 t_result2.html로 이동
+        window.location.href = "{{ url_for('t_result2') }}";
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
+
+    // 마우스 이벤트 처리
+    window.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      startY = e.clientY;
+    });
+
+    window.addEventListener('mousemove', function(e) {
+      if (isDragging) {
+        let diffY = e.clientY - startY;
+        if (diffY < -50) { // 위로 드래그했을 때만 이동 (임계값 설정)
+          window.location.href = "{{ url_for('t_result2') }}";
+          isDragging = false; // 중복 실행 방지
+        }
+      }
+    });
+
+    window.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+
+    // group-76.svg 클릭 시 t_result1.html로 이동
+    document.addEventListener('DOMContentLoaded', function() {
+      const backVec = document.querySelector('.back-vec');
+      backVec.addEventListener('click', function() {
+        window.location.href = "{{ url_for('t_result1') }}";
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="overlap-group">
+        <img class="mid-rect" src="{{ url_for('static', filename='trust_img3/mid-rect.svg') }}" alt="Mid Rect" />
+        <img class="mid-de" src="{{ url_for('static', filename='trust_img3/mid-de.svg') }}" alt="Mid De" />
+        <p class="p">
+          <span class="text-wrapper">01<br /></span>
+          <span class="span">때로는</span>
+          <span class="text-wrapper-3">특별한 이유가 없어도,<br />한 발짝 다가가보는 것</span><span class="span">이 좋다.</span>
+        </p>
+        <p class="div-2">
+          <span class="text-wrapper">02<br /></span>
+          <span class="span">가족과 함께할 때, </span>
+          <span class="text-wrapper-3">나의 태도가 무심<br />하게 보이진 않을지 </span>
+          <span class="span">다시 생각해 본다.</span>
+        </p>
+        <p class="div-3">
+          <span class="text-wrapper">03<br /></span>
+          <span class="text-wrapper-3">반복적인 표현 시,</span>
+          <span class="span">오류 발생 확률이 높아지니 주의해야 한다.</span>
+        </p>
+        <img class="side-vec" src="{{ url_for('static', filename='trust_img3/side-vec.svg') }}" alt="Side Vec" />
+        <img class="title-vec" src="{{ url_for('static', filename='trust_img3/title-vec.svg') }}" alt="Title Vec" />
+        <div class="text-wrapper-4">오류 감소 tip</div>
+        <img class="line-vec" src="{{ url_for('static', filename='trust_img3/line-vec-2.png') }}" alt="Line Vec 2" />
+        <img class="img" src="{{ url_for('static', filename='trust_img3/line-vec-1.png') }}" alt="Line Vec 1" />
+        <img class="fm-vec" src="{{ url_for('static', filename='trust_img3/fm-vec.svg') }}" alt="FM Vec" />
+      </div>
+      <img class="back-vec" src="{{ url_for('static', filename='trust_img3/group-76.svg') }}" alt="Back Vec" />
+      <div class="text-wrapper-5">믿음직 주파수</div>
+      <img class="arr" src="{{ url_for('static', filename='trust_img3/arr-3.svg') }}" alt="Arr 3" />
+      <img class="arr-2" src="{{ url_for('static', filename='trust_img3/arr-2.svg') }}" alt="Arr 2" />
+      <img class="arr-3" src="{{ url_for('static', filename='trust_img3/arr-1.svg') }}" alt="Arr 1" />
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='load1.css') }}" />
+
+    <!-- 5초 후 자동 리다이렉트 설정 -->
+    <meta http-equiv="refresh" content="5; url={{ next_page }}" />
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+        <div class="card">
+          <video src="{{ url_for('static', filename='load_img1/card-video.mp4') }}" autoplay loop muted></video>
+        </div>
+        <div class="text-wrapper">주파수 연구카드를<br />발급하고 있어요.<br /><br />잠시만 기다려주세요!</div>
+        <div class="load-vec">
+          <!-- load.mp4 비디오 추가 -->
+          <video src="{{ url_for('static', filename='load_img1/load.mp4') }}" autoplay loop muted></video>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

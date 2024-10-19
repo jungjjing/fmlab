@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='start_4.css') }}" />
+  <script>
+    // 페이지 로드 후 3초 후에 자동으로 question1으로 이동
+    setTimeout(function() {
+      window.location.href = "/question1";
+    }, 3000); // 3000 밀리초 = 3초
+  </script>
+</head>
+<body>
+  <div class="screen">
+    <div class="div">
+      <div class="card-video">
+        <video src="{{ url_for('static', filename='start_img4/card-video.mp4') }}" autoplay loop muted></video>
+      </div>
+      <p class="text-wrapper">
+        {{ username }}의 주파수 연구를 시작합니다!<br /><br />평소 자신의 모습을 떠올리며,<br />다음 문항에 답해주세요.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

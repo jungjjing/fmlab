@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="splash.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='splash.css') }}" />
+  <!-- 6초 후 자동 리다이렉트 설정 -->
+  <meta http-equiv="refresh" content="6; url={{ url_for('start_1') }}" />
+</head>
+<body>
+  <div class="div-wrapper">
+    <div class="div">
+      <!-- 비디오 태그 추가 -->
+      <video src="{{ url_for('static', filename='splash_img/splash-img.mp4') }}" autoplay loop muted></video>
+    </div>
+  </div>
+</body>
+</html>

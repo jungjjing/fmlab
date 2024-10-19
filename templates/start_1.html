@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='start_1.css') }}" />
+  </head>
+  <body>
+    <div class="iphone">
+      <div class="div">
+        <img class="group" src="{{ url_for('static', filename='start_img1/group-33.png') }}" />
+        <img class="img" src="{{ url_for('static', filename='start_img1/group-78.png') }}" />
+        <img class="ne-vect" src="{{ url_for('static', filename='start_img1/ne-vect.svg') }}" />
+        <img class="li-vect" src="{{ url_for('static', filename='start_img1/li-vect.svg') }}" />
+        <img class="or-vect" src="{{ url_for('static', filename='start_img1/or-vect.svg') }}" />
+        <div class="overlap-group">
+          <img class="tr-vect" src="{{ url_for('static', filename='start_img1/tr-vect.svg') }}" />
+          <img class="cu-vect" src="{{ url_for('static', filename='start_img1/cu-vect.svg') }}" />
+          <div class="FM">환영합니다!<br />주파수연구소 FM에 입장하시겠어요?</div>
+        </div>
+        
+        <!-- 폼 태그 추가 -->
+        <form action="/start_1" method="POST">
+          <button type="submit" class="button-vec">
+            <div class="text-wrapper">주파수연구소 FM 입장하기</div>
+          </button>
+        </form>
+        
+      </div>
+    </div>
+  </body>
+</html>

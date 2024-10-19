@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='t_result2.css') }}" />
+  <script>
+    let isDragging = false;
+    // 마우스가 눌렸을 때 드래그 시작
+    window.addEventListener('mousedown', function() {
+      isDragging = true;
+    });
+    // 마우스를 움직일 때 드래그 중이면 페이지 이동
+    window.addEventListener('mousemove', function(event) {
+      if (isDragging) {
+        window.location.href = "{{ url_for('t_result3') }}";
+      }
+    });
+    // 마우스 버튼을 놓았을 때 드래그 종료
+    window.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+    
+    // 스크롤 이벤트를 감지하여 t_result3.html로 이동
+    window.addEventListener('scroll', function() {
+      window.location.href = "{{ url_for('t_result3') }}";
+    });
+
+    // group-76.svg 이미지를 클릭하면 t_result1.html로 이동
+    function goToTResult1() {
+      window.location.href = "{{ url_for('t_result1') }}";
+    }
+  </script>
+</head>
+<body>
+  <div class="element">
+    <div class="div">
+      <div class="overlap-group">
+        <img class="mid-large" src="{{ url_for('static', filename='trust_img2/mid-large.svg') }}" />
+        <img class="mid-rect" src="{{ url_for('static', filename='trust_img2/mid-rect.svg') }}" />
+        <img class="mid-de-vec" src="{{ url_for('static', filename='trust_img2/mid-de-vec.svg') }}" />
+        <div class="text-wrapper">신뢰</div>
+        <div class="text-wrapper-2">무심함</div>
+        <img class="mid-arr" src="{{ url_for('static', filename='trust_img2/mid-arr.svg') }}" />
+        <p class="p">
+          <span class="span">가족에 대한 </span>
+          <span class="text-wrapper-3">신뢰가 커, 간섭 없이<br />묵묵한 모습</span><span class="span">이 가족의 입장에서 </span>
+          <span class="text-wrapper-3">무심<br />하게 느껴지는 오류</span><span class="span">가 발생할 수 있다.</span>
+        </p>
+        <img class="side-vec" src="{{ url_for('static', filename='trust_img2/side-vec.svg') }}" />
+        <img class="title-vec" src="{{ url_for('static', filename='trust_img2/title-vec.svg') }}" />
+        <div class="text-wrapper-4">발생 오류</div>
+        <img class="fm-vec" src="{{ url_for('static', filename='trust_img2/fm-vec.svg') }}" />
+      </div>
+      <img class="arr" src="{{ url_for('static', filename='trust_img2/arr-3.svg') }}" />
+      <img class="img" src="{{ url_for('static', filename='trust_img2/arr-2.svg') }}" />
+      <img class="arr-2" src="{{ url_for('static', filename='trust_img2/arr-1.svg') }}" />
+      <!-- 클릭하면 t_result1.html로 이동 -->
+      <img class="back-vec" src="{{ url_for('static', filename='trust_img2/group-76.svg') }}" onclick="goToTResult1()" />
+      <div class="text-wrapper-5">믿음직 주파수</div>
+      <div class="text-wrapper-6">카드를 옆으로 넘겨보세요!</div>
+    </div>
+  </div>
+</body>
+</html>
